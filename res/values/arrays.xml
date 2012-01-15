@@ -1,0 +1,11 @@
+<resources>
+	<string-array name="encoder">
+		<item>VP8</item>
+		<item>WebM</item>
+	</string-array>
+
+<string-array name="encoder_values">
+		<item>001</item>
+		<item>002</item>
+	</string-array>
+</resources>

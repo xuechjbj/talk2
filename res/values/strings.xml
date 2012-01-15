@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MainUI!</string>
+    <string name="app_name">talk2</string>
+    <string name="confirm_accept">An invitition is from %1$s(%2$s). Do you accept it?</string>
+    <string name="reject_connected_str">Connect request rejected by %1$s</string>
+    <string name="connecting_str" >Connecting to %1$s:%2$s...</string>
+    <string name="ip_edittext_hint_str">Input IP address here</string>
+    <string name="user_listview_title_str">Online User List</string>
+    <string name="offline">offline</string>
+    <string name="online">online</string>
+    <string name="your_name">Your name</string>
+    <string name="chat_port">Chat port</string>
+    <string name="video_resolution">Video resolution</string>
+    <string name="video_encoder">Video encoder</string>
+    <string name="pref_my_name">My name</string>
+    <string name="settings_option_title">Settings</string>
+</resources>

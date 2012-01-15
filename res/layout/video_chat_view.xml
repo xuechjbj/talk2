@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/parent" android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+
+	<LinearLayout android:id="@+id/preview_rgn"
+		android:layout_width="fill_parent" android:layout_height="150dip"
+		android:orientation="horizontal" android:layout_alignParentBottom="true"
+		android:background="#00000000" android:gravity="center_vertical">
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="80dip" android:layout_height="160dip"
+			android:orientation="vertical" android:gravity="center"
+			android:padding="2dip">
+			<!-- <Button android:id="@+id/photo_btn" android:text="Photo"
+				android:layout_width="match_parent" android:layout_height="wrap_content" />-->
+			<Button android:id="@+id/stop_btn" android:text="Stop"
+				android:layout_width="match_parent" android:layout_height="wrap_content" />
+		</LinearLayout>
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="match_parent" android:layout_height="match_parent"
+			android:orientation="vertical" android:padding="2dip">
+
+			<SurfaceView android:id="@+id/preview" android:background="@drawable/my_preview_bg"
+				android:layout_width="match_parent" android:layout_height="match_parent" />
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<LinearLayout android:id="@+id/tx_info_disp"
+		android:layout_above="@+id/preview_rgn" android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+		<TableLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:stretchColumns="*">
+			<TableRow android:layout_margin="2dip">
+				<TextView android:text="Rx:" android:textSize="20dip"
+					android:gravity="left" android:layout_margin="2dip" />
+				<TextView android:id="@+id/rx_info2" android:textSize="16dip"
+					android:layout_margin="2dip" android:gravity="left" />
+				<TextView android:id="@+id/rx_info3" android:textSize="16dip"
+					android:layout_margin="2dip" android:gravity="left" />
+				<TextView android:id="@+id/rx_info1" android:textSize="16dip"
+					android:layout_margin="2dip" android:gravity="left" />
+			</TableRow>
+
+			<TableRow android:layout_margin="1dip">
+				<TextView android:text="Tx:" android:textSize="20dip"
+					android:gravity="left" android:layout_margin="5dip" />
+
+				<TextView android:id="@+id/tx_info2" android:textSize="16dip"
+					android:layout_margin="2dip" android:gravity="left" />
+				<TextView android:id="@+id/tx_info3" android:textSize="16dip"
+					android:layout_margin="2dip" android:gravity="left" />
+			</TableRow>
+
+		</TableLayout>
+	</LinearLayout>
+
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="260dip">
+
+		<com.xue.talk2.ui.PeerVideoView
+			android:background="@drawable/peer_view_bg" android:id="@+id/preview3"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:layout_above="@id/tx_info_disp"
+			android:layout_centerInParent="true" />
+
+		<TextView android:id="@+id/tx_info1" android:textSize="20sp"
+			android:textColor="#ffffffff" android:shadowColor="#FF888888"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentRight="true" android:shadowDx="1.5"
+			android:shadowDy="1.5" android:shadowRadius="1.5" />
+			
+		<TextView android:id="@+id/peer_name" android:textSize="20sp"
+			android:textColor="#ffffffff" android:shadowColor="#FF888888"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentLeft="true" android:paddingLeft="6sp"
+			android:paddingTop="4sp"/>
+
+	</RelativeLayout>
+</RelativeLayout>

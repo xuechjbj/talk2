@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@android:color/black">
+
+	<RelativeLayout android:id="@+id/listHeader"
+		android:background="@drawable/jbshape" android:layout_alignParentTop="true"
+		android:gravity="center_horizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<ImageButton android:id="@+id/config_btn"
+			android:layout_marginTop="2px" android:focusable="true"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginLeft="2px" android:src="@drawable/configure"
+			android:layout_alignParentLeft="true" android:gravity="center" />
+
+		<ProgressBar android:id="@+id/progress_bar"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginTop="2px" style="?android:attr/progressBarStyle"
+			android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+
+		<TextView android:text="@string/user_listview_title_str"
+			android:textColor="#000000" android:textSize="20dip"
+			android:layout_width="fill_parent" android:layout_marginTop="10dip"
+			android:layout_height="wrap_content" android:layout_alignParentTop="true"
+			android:gravity="center" />
+	</RelativeLayout>
+
+	<RelativeLayout android:id="@+id/listBottom"
+		android:background="@drawable/jbshape"
+		android:layout_alignParentBottom="true" android:gravity="center"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:focusableInTouchMode="true">
+
+		<TextView android:id="@+id/promote_str" android:text="IP:"
+			android:textColor="#000000" android:textSize="20dip"
+			android:layout_marginTop="10dip" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+			android:gravity="center" />
+
+
+		<ImageButton android:id="@+id/connect_btn"
+			android:layout_marginTop="2px" android:focusable="true"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginLeft="2px" android:src="@drawable/connect"
+			android:layout_alignParentRight="true" android:gravity="center" />
+
+		<EditText android:id="@+id/user_input_ip" android:textColor="#000000"
+			android:textSize="20dip" android:layout_width="wrap_content"
+			android:hint="@string/ip_edittext_hint_str" android:layout_marginTop="2dip"
+			android:layout_height="wrap_content" android:layout_alignParentTop="true"
+			android:layout_toLeftOf="@id/connect_btn" android:layout_toRightOf="@id/promote_str"
+			android:singleLine="true" />
+
+	</RelativeLayout>
+
+	<ListView android:id="@+id/lv_main" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_below="@id/listHeader"
+		android:layout_above="@id/listBottom" android:divider="#00000000"
+		android:dividerHeight="2dp" android:cacheColorHint="#00000000"
+		android:scrollingCache="false" android:layout_marginTop="5sp"
+		android:layout_marginLeft="5sp" android:layout_marginRight="5sp"/>
+</RelativeLayout>

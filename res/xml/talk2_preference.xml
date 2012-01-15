@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<EditTextPreference android:dialogTitle="Your name"
+		android:title="@string/pref_my_name" android:key="pref_my_name"
+		android:defaultValue="my name"></EditTextPreference>
+	<EditTextPreference android:title="@string/chat_port"
+		android:key="pref_broadcast_port" android:defaultValue="19361"></EditTextPreference>
+	<ListPreference android:title="@string/video_resolution"
+		android:key="video_res_pref"></ListPreference>
+	<ListPreference android:entryValues="@array/encoder_values"
+		android:entries="@array/encoder" android:dialogTitle="@string/video_encoder"
+		android:title="@string/video_encoder"></ListPreference>
+
+</PreferenceScreen>
